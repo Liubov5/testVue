@@ -1,11 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Menu msg="LIUBA" />
   <router-view/>
 </template>
 
+<script>
+//подключаю компонент
+import Menu from '@/components/menu.vue'
+
+//регистрирую компонент, чтобы дальше его использовать
+export default{
+  components: {
+    Menu
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
